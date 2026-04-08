@@ -42,13 +42,13 @@
     for i in (-1, 0, 1) {
       line(
         (o.noc_width / 2 + o.noc_gap * i, -o.noc_height / 2 - overhang),
-        (o.noc_width / 2 + o.noc_gap * i,  o.noc_height / 2 - overhang),
+        (o.noc_width / 2 + o.noc_gap * i, o.noc_height / 2 - overhang),
         stroke: o.noc_stroke,
         name: "noc-x" + str(x) + "-y" + str(y) + "-" + str(i + 1),
       )
       line(
         (-o.noc_width / 2 + overhang, -o.noc_height / 2 + o.noc_gap * i),
-        ( o.noc_width / 2 + overhang, -o.noc_height / 2 + o.noc_gap * i),
+        (o.noc_width / 2 + overhang, -o.noc_height / 2 + o.noc_gap * i),
         stroke: o.noc_stroke,
         name: "noc-y" + str(y) + "-x" + str(x) + "-" + str(i + 1),
       )
@@ -106,7 +106,7 @@
       if o.tcu_connect {
         line("tcu", ((c, t) => (t.at(0), c.at(1)), "cu.south", "tcu"))
       }
-    }
+    },
   )
 }
 
@@ -124,7 +124,7 @@
 
 #let cu_dram(o, label: [DRAM]) = cu_core(
   o + (core_fill: o.mem_fill, core_stroke: o.mem_stroke, core_label: o.mem_label),
-  label
+  label,
 )
 
 #let cu_rot(o, unimux: false) = {
@@ -226,15 +226,13 @@
     height: (o.core_size + gap * 2 - .1) / 2,
   )
 
-  assert(apps.len() == 1 or apps.len() == 2);
+  assert(apps.len() == 1 or apps.len() == 2)
   for (i, a) in apps.enumerate() {
     let (pos, width) = if apps.len() == 1 {
       ((in-north: ("core", gap)), o.core_size * 2)
-    }
-    else if i == 0 {
+    } else if i == 0 {
       ((in-north-west: ("core", gap)), o.core_size - gap / 2)
-    }
-    else {
+    } else {
       ((in-north-east: ("core", gap)), o.core_size - gap / 2)
     }
     block(
