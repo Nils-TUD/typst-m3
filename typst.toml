@@ -1,4 +1,4 @@
 [package]
-name = "tiles"
+name = "m3"
 version = "0.1.0"
-entrypoint = "src/tiles.typ"
+entrypoint = "src/lib.typ"
