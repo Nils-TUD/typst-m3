@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.4.2"
-#import "@local/nodes:0.1.0"
+#import "@local/proxim:0.1.0"
 
 #let defaults() = (
   noc_width: 8,
@@ -82,7 +82,7 @@
   }
 }
 
-#let block(..args) = nodes.node(radius: 1pt, ..args)
+#let block(..args) = proxim.node(radius: 1pt, ..args)
 
 #let tile(o, cu, tcu: [TCU]) = {
   import cetz.draw: *
