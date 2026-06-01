@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.4.2"
+#import "@preview/cetz:0.5.2"
 #import "@local/proxim:0.1.0"
 
 #let defaults() = (
@@ -104,7 +104,7 @@
         name: "tcu",
       )
       if o.tcu_connect {
-        line("tcu", ((c, t) => (t.at(0), c.at(1)), "cu.south", "tcu"))
+        line("tcu", ("tcu", "|-", "cu.south"))
       }
     },
   )
