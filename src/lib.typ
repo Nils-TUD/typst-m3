@@ -1,8 +1,8 @@
 #import "tiles.typ" as tiles
 
-#let m3name(prefix, suffix) = [
-  #prefix#super(typographic: false, size: .75em, baseline: -.2em)[#text[3]]#suffix
-]
+#let m3name(prefix, suffix) = {
+  [#prefix#super(typographic: false, size: .75em, baseline: -.2em)[#text[3]]#suffix]
+}
 
 #let m3 = m3name(smallcaps[M], [])
 #let teem3 = m3name(smallcaps[TEEM], [])
