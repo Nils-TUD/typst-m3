@@ -1,4 +1,4 @@
-#import "tiles.typ" as tiles
+#import "tiled.typ" as tiled
 
 #let m3name(prefix, suffix) = {
   [#prefix#super(typographic: false, size: .75em, baseline: -.2em)[#text[3]]#suffix]
