@@ -9,3 +9,4 @@
 #let teem3 = m3name(smallcaps[TEEM], [])
 #let m3x = m3name(smallcaps[M], [x])
 #let m3v = m3name(smallcaps[M], [v])
+#let teem3 = m3name([TEEM], [])
